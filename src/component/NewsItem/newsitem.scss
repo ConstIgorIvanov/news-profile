@@ -1,0 +1,13 @@
+.item {
+  font-size: 24px;
+  &__container {
+    display: flex;
+  }
+  &__title {
+    margin-right: 5px;
+    color: gray;
+  }
+  &__body{
+      font-weight: bold;
+  }
+}
