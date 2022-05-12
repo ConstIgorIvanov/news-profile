@@ -10,12 +10,18 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="news-profile/" element={<Layout></Layout>}>
-          <Route path="/" element={<MainPage></MainPage>}></Route>
-          <Route path="/login" element={<LoginPage></LoginPage>}></Route>
-          <Route path="/news" element={<NewsPage></NewsPage>}></Route>
+        <Route path="/" element={<Layout></Layout>}>
+          <Route path="/news-profile" element={<MainPage></MainPage>}></Route>
           <Route
-            path="/profile"
+            path="news-profile/login"
+            element={<LoginPage></LoginPage>}
+          ></Route>
+          <Route
+            path="news-profile/news"
+            element={<NewsPage></NewsPage>}
+          ></Route>
+          <Route
+            path="news-profile/profile"
             element={
               <PrivateAuth>
                 <ProfilePage></ProfilePage>

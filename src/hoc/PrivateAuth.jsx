@@ -4,7 +4,7 @@ const PrivateAuth = ({ children }) => {
   const user = useSelector((state) => state.user.user);
 
   if (!user) {
-    return <Navigate to="/login"></Navigate>;
+    return <Navigate to="news-profile/login"></Navigate>;
   }
   
   return children;
