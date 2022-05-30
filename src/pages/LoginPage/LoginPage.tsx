@@ -1,29 +1,36 @@
-import "./loginpage.scss";
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setUser, deleteUser } from "../../features/userSlice";
-const LoginPage = () => {
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.user);
+import React from 'react';
+
+import { useAppDispatch, useAppSelector } from '../../hooks';
+import { setUser, deleteUser } from '../../features/userSlice';
+
+import './loginpage.scss';
+
+const LoginPage: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const user = useAppSelector((state) => state.user.user);
+
   const [userData, setData] = React.useState({
-    username: "",
-    password: "",
+    username: '',
+    password: '',
   });
-  const changeUsername = (e) => {
-    setData((prev) => ({ ...prev, username: e }));
+
+  const changeUsername = (name: string) => {
+    setData((prev) => ({ ...prev, username: name }));
   };
-  const changePassword = (e) => {
-    setData((prev) => ({ ...prev, password: e }));
+  const changePassword = (password: string) => {
+    setData((prev) => ({ ...prev, password: password }));
   };
+
   const register = () => {
-    if (userData.username && userData.password !== "") {
+    if (userData.username && userData.password !== '') {
       dispatch(setUser(userData));
       setData({
-        username: "",
-        password: "",
+        username: '',
+        password: '',
       });
     }
   };
+
   return (
     <>
       {user ? (
@@ -39,15 +46,13 @@ const LoginPage = () => {
             <div>username:</div>
             <input
               onChange={(e) => changeUsername(e.target.value)}
-              value={userData.username}
-            ></input>
+              value={userData.username}></input>
           </div>
           <div>
             <div>password:</div>
             <input
               onChange={(e) => changePassword(e.target.value)}
-              value={userData.password}
-            ></input>
+              value={userData.password}></input>
           </div>
           <button onClick={() => register()}>Register</button>
         </div>
