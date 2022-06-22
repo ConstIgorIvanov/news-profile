@@ -1,11 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { Layout } from './component/Layout/Layout';
-import { LoginPage } from './pages/LoginPage/LoginPage';
-import { NewsPage } from './pages/NewsPage/NewsPage';
-import { ProfilePage } from './pages/ProfilePage/ProfilePage';
-import { MainPage } from './pages/MainPage/MainPage';
+import { Layout } from './component/Layout';
+import { LoginPage } from './pages/LoginPage';
+import { NewsPage } from './pages/NewsPage';
+import { ProfilePage } from './pages/ProfilePage';
+import { MainPage } from './pages/MainPage';
 import { PrivateAuth } from './hoc/PrivateAuth';
+
+import './scss/app.scss';
 
 const App: React.FC = () => {
   return (

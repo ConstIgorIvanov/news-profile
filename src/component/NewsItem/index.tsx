@@ -1,7 +1,5 @@
 import { post } from '../../features/newsSlice';
 
-import './newsitem.scss';
-
 const NewsItem: React.FC<post> = ({ id, title, body }) => {
   return (
     <div className="item">

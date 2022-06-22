@@ -1,0 +1,21 @@
+@import './variables';
+@import './libs/normalize';
+@import './components/all';
+
+.container {
+  max-width: 1440px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 12px;
+  width: 200px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid $darkblue;
+  &:hover {
+    transition: $duration;
+    transform: scale(1.04);
+  }
+}

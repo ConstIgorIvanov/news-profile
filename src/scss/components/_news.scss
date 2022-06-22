@@ -5,9 +5,10 @@
   }
   &__title {
     margin-right: 5px;
-    color: gray;
+    color: $black;
+    font-weight: 700;
   }
-  &__body{
-      font-weight: bold;
+  &__body {
+    font-weight: 400;
   }
 }

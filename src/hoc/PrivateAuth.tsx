@@ -2,7 +2,11 @@ import { Navigate } from 'react-router-dom';
 
 import { useAppSelector } from '../hooks';
 
-const PrivateAuth = ({ children }: React.ReactNode | any) => {
+interface PrivateAuthProps {
+  children: JSX.Element;
+}
+
+const PrivateAuth = ({ children }: PrivateAuthProps): JSX.Element => {
   const user = useAppSelector((state) => state.user.user);
 
   if (!user) {

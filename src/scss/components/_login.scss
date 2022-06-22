@@ -1,0 +1,51 @@
+.logout {
+  font-weight: 700;
+  font-size: 24px;
+  &__username {
+    margin-bottom: 20px;
+  }
+  & span {
+    margin-left: 10px;
+    font-weight: 400;
+  }
+}
+
+.register {
+  font-weight: 700;
+  font-size: 24px;
+  &__username {
+    margin-bottom: 20px;
+    &--input {
+      border-radius: 8px;
+      margin-bottom: 20px;
+      width: 200px;
+      height: 30px;
+      background-color: inherit;
+      border: 1px solid $darkblue;
+      &:focus {
+        transition: 2 * $duration;
+        width: 300px;
+        transform: scale(1.04);
+      }
+    }
+  }
+  &__password {
+    margin-bottom: 20px;
+    &--input {
+      border-radius: 8px;
+      margin-bottom: 20px;
+      width: 200px;
+      height: 30px;
+      background-color: inherit;
+      border: 1px solid $darkblue;
+      &:focus {
+        transition: 2 * $duration;
+        width: 300px;
+        transform: scale(1.04);
+      }
+    }
+  }
+  & span {
+    font-weight: 400;
+  }
+}

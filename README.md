@@ -1,3 +1,3 @@
-RTK
+Private Route HOC test
 
-test private route.
+RTK, TS, React Router Dom

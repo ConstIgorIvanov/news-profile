@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useAppDispatch, useAppSelector } from '../../hooks';
 
-import { NewsItem } from '../../component/NewsItem/NewsItem';
+import { NewsItem } from '../../component/NewsItem';
 
 import { getPosts } from '../../features/newsSlice';
 
